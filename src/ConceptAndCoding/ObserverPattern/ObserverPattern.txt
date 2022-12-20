@@ -15,3 +15,58 @@ The sole responsibility of a subject is to maintain a list of observers and to n
  This makes subject and observers loosely coupled. Subject and observers have no explicit knowledge of each other.
  Observers can be added and removed independently at run-time.
  This notification-registration interaction is also known as publish-subscribe.
+
+
+
+ ______________________________
+ |                              |
+ |    Code Implementation       |
+ |                              |
+ |_______________________________
+
+ Below is an example written in Java that takes keyboard input and treats each input line as an event.
+ When a string is supplied from System.in, the method notifyObservers is then called, in order to notify all observers
+ of the event's occurrence, in the form of an invocation of their 'update' methods.
+
+
+ import java.util.List;
+ import java.util.ArrayList;
+ import java.util.Scanner;
+
+ class EventSource {
+     public interface Observer {
+         void update(String event);
+     }
+
+     private final List<Observer> observers = new ArrayList<>();
+
+     private void notifyObservers(String event) {
+         observers.forEach(observer -> observer.update(event));
+     }
+
+     public void addObserver(Observer observer) {
+         observers.add(observer);
+     }
+
+     public void scanSystemIn() {
+         Scanner scanner = new Scanner(System.in);
+         while (scanner.hasNextLine()) {
+             String line = scanner.nextLine();
+             notifyObservers(line);
+         }
+     }
+ }
+
+
+ public class ObserverDemo {
+     public static void main(String[] args) {
+         System.out.println("Enter Text : ");
+         EventSource eventSource = new EventSource();
+
+         eventSource.addObserver(event -> {
+             System.out.println("Received response: " + event);
+         });
+
+         eventSource.scanSystemIn();
+     }
+ }
