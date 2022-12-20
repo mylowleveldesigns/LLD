@@ -1,0 +1,26 @@
+Strategy Design Pattern
+
+Let's say you have a class, and it has many subclasses. Now it is okay if subclasses are using functionalities of base class.
+But if the Parent Class does not have a functionality and all the base class wants to add that functionality, then
+they will have to implement it independently leading to code dependency.
+
+So we can make that functionality from an interface, and Base class can have that interface. and every class
+can implement in its own way
+
+Eg -
+Vehicle Class {
+    drive()
+    brake()
+    fuel()
+}
+
+It has 3 subclasses - SportVehicle, OffRoad Vehicle and Passenger Vehicle. Passenger vehicle is having the functionalities
+of Base class itself. But both SportVehicle and OffRoadVehicle class are implementing drive() method in following way -
+drive(){
+    // This is Drive functionality for a  Super Slick Vehicle
+}
+
+Here we are having redundant code.
+
+In the example Code, we are Using Interface for DriveStrategy and passing that in the constructor of object to
+define which behaviour class will choose.
