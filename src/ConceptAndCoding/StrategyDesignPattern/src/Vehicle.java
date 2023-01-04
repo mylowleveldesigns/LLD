@@ -12,4 +12,12 @@ public class Vehicle {
     public void drive(){
         driveStrategy.drive();
     }
+
+    public void brake() {
+        // Functionality for brake
+    }
+
+    public void fuel(){
+        // functionality for fuel
+    }
 }

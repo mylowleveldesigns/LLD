@@ -1,3 +1,4 @@
+Taken from Wikipedia -
 The Observer pattern addresses the following problems:[2]
 
 A one-to-many dependency between objects should be defined without making the objects tightly coupled.

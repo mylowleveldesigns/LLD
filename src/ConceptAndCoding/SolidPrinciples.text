@@ -24,8 +24,8 @@
 
 
 
-         Interface Segmentd Principle
-         Interfaces should be such that, classes should not implement unnecessary functions theat they do not need.
+         Interface Segmented Principle
+         Interfaces should be such that, classes should not implement unnecessary functions that they do not need.
 
 
 

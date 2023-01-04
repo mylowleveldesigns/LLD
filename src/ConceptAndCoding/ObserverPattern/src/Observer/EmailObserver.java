@@ -4,7 +4,7 @@ import ConceptAndCoding.ObserverPattern.src.Observable.StockObservable;
 
 public class EmailObserver implements Observer{
     String email;
-    StockObservable observable; // Adding observable here, so that it can
+    StockObservable observable; // Adding observable here, so that it can extract related information
 
     public EmailObserver(String email, StockObservable observable) {
         this.email = email;

@@ -1,0 +1,14 @@
+Let's say we have an object O with property f1, and after some time we need to add another property f2 on it.
+Instead of adding f2 on the base object, we will decorate it on another extension of base class.
+Similarly for f3, f4, f4 ... fn
+
+This save us from something called class explosion
+
+Eg Base class car
+
+F1 -> AC
+F2 -> SterosSystem
+F3 -> powerstearing
+
+There can be combinatorics of these properties as well .
+So, that's when decorator pattern comes into picture.

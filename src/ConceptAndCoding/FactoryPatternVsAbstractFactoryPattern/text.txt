@@ -1,0 +1,11 @@
+Factory Pattern -> used for object creation based on conditions
+Conditional basis pe objects creation needed.
+
+Abstract Factory Pattern ->
+It's a factory of factory
+Eg We need vehicle.
+There are 2 types of vehicles -> Ordinary Vehicle, Luxury Vehicle.
+
+There can be two factories for getting vehicles -> OrdinaryVehicleFactory and LuxuryVehicleFactory.
+
+Now we will again have a factory which will provide either of the above two.
