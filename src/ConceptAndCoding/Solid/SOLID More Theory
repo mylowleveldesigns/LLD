@@ -1,0 +1,8 @@
+// Single Responsibility Principle
+
+
+// Opne Closed Principle
+Software Entities - Clasees, Modules should be open for extension but closed for modification.
+
+If new requirements came then we should be able to incorporate those requirements just by somehow extending
+the classes, or by adding new classes, but not modifying the already tested code and classes.
